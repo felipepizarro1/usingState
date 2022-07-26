@@ -6,6 +6,7 @@ function CounterComponent() {
 
     const [count, setCount] = useState(0) //<--counter will begin on 0 
 
+
     function increment() {
         setCount((pcount) => pcount + 1)
     }
@@ -14,11 +15,14 @@ function CounterComponent() {
         setCount((pcount) => pcount  - 1)
     }
 
+
+
   return (
     <div>
         <p>{count}</p>
-        <button onClick={decrease}>-</button>
-        <button onClick={increment}>+</button>
+        <p className={count === 5 ? "d-flex" : "d-none"}>Wow 5!</p>
+        <button onClick={decrease} className="btn">-</button>
+        <button onClick={increment} className="btn">+</button>
     </div>
   )
 }
