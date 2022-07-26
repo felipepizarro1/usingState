@@ -7,11 +7,11 @@ function CounterComponent() {
     const [count, setCount] = useState(0) //<--counter will begin on 0 
 
     function increment() {
-        setCount(count + 1)
+        setCount((pcount) => pcount + 1)
     }
 
     function decrease() {
-        setCount(count - 1)
+        setCount((pcount) => pcount  - 1)
     }
 
   return (
