@@ -7,7 +7,7 @@ function Starwarscomponent() {
     useEffect(()=>{
       fetch(`https://swapi.dev/api/${update}`)
       .then(response => response.json())
-      .then(json => setContent(json))
+      .then(json => setContent(json.results))
     }, [update])
 
     
@@ -19,17 +19,37 @@ function Starwarscomponent() {
         setUpdate((pupdate) => pupdate = "planets")
     }
     function starships(){
-        setUpdate((pupdate) => pupdate = "photos")
+        setUpdate((pupdate) => pupdate = "starships")
     }
 
   return (
     <>
     
-    <button onClick={characters}>Characters</button>
-    <button onClick={planets}>Planets</button>
-    <button onClick={starships}>Starships</button>
+    <button className='btn btn-outline-light m-2' onClick={characters}>Characters</button>
+    <button className='btn btn-outline-light m-2' onClick={planets}>Planets</button>
+    <button className='btn btn-outline-light m-2' onClick={starships}>Starships</button>
     <div>{update}</div>
-    {JSON.stringify(content)}
+    <div className='card bg-transparent'>
+    {content.map((item, i) =>{
+      return (
+        <p key={i}>  
+
+            {JSON.stringify(item.name)}
+            
+        </p>
+      )
+    })}
+    {update === "people" ? content.map((item, i) =>{
+      return (
+        <p key={i}>  
+
+            {JSON.stringify(item.height)}
+            
+        </p>
+      )
+    }) : null }
+
+    </div>
       
     </>
   )
