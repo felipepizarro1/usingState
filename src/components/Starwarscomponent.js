@@ -1,7 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function Starwarscomponent() {
-    const [update, setUpdate] = useState()
+    const [update, setUpdate] = useState("people")
+    const [content, setContent] = useState([])
+
+    useEffect(()=>{
+      fetch(`https://swapi.dev/api/${update}`)
+      .then(response => response.json())
+      .then(json => setContent(json))
+    }, [update])
 
     
 
@@ -12,7 +19,7 @@ function Starwarscomponent() {
         setUpdate((pupdate) => pupdate = "planets")
     }
     function starships(){
-        setUpdate((pupdate) => pupdate = "starships")
+        setUpdate((pupdate) => pupdate = "photos")
     }
 
   return (
@@ -22,6 +29,8 @@ function Starwarscomponent() {
     <button onClick={planets}>Planets</button>
     <button onClick={starships}>Starships</button>
     <div>{update}</div>
+    {JSON.stringify(content)}
+      
     </>
   )
 }
