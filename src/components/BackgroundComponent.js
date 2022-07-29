@@ -36,9 +36,9 @@ function BackgroundComponent() {
     <>
     <div className={background}>{text}</div>
     <h6 className={info}>This is just text that appears after you click the {color} button</h6>
-    <button onClick={alarm} className="btn btn-outline-dark m-2">Red</button>
-    <button onClick={black} className="btn btn-outline-dark m-2">Dark</button>
-    <button onClick={zero} className="btn btn-outline-dark m-2">Reset</button>
+    <button onClick={alarm} className="btn btn-outline-light m-2">Red</button>
+    <button onClick={black} className="btn btn-outline-light m-2">Dark</button>
+    <button onClick={zero} className="btn btn-outline-light m-2">Reset</button>
 
     </>
   )

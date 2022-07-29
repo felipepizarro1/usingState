@@ -27,9 +27,9 @@ function CounterComponent() {
         <p className={count === 10 ? "d-flex justify-content-center" : "d-none"}>Perfect 10!!</p>
         <p className={count === -5 ? "d-flex justify-content-center" : "d-none"}>-5, going backwards!</p>
         <p className={count === -10 ? "d-flex justify-content-center" : "d-none"}>Awesome, you should stop now!</p>
-        <button onClick={decrease} className="btn btn-outline-dark m-2">-</button>
-        <button onClick={increment} className="btn btn-outline-dark m-2">+</button>
-        <button onClick={zero} className="btn btn-outline-dark m-2">Reset</button>
+        <button onClick={decrease} className="btn btn-outline-light m-2">-</button>
+        <button onClick={increment} className="btn btn-outline-light m-2">+</button>
+        <button onClick={zero} className="btn btn-outline-light m-2">Reset</button>
     </div>
   )
 }
