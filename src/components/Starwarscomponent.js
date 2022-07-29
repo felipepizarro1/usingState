@@ -6,13 +6,13 @@ function Starwarscomponent() {
     
 
     function characters(){
-        setUpdate((pupdate) => pupdate = "r2 and friends")
+        setUpdate((pupdate) => pupdate = "people")
     }
     function planets(){
-        setUpdate((pupdate) => pupdate = "tattoine and others")
+        setUpdate((pupdate) => pupdate = "planets")
     }
     function starships(){
-        setUpdate((pupdate) => pupdate = "falcon millenium")
+        setUpdate((pupdate) => pupdate = "starships")
     }
 
   return (

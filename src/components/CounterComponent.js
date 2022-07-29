@@ -22,7 +22,7 @@ function CounterComponent() {
 
   return (
     <div>
-        <p>{count}</p>
+        <p >{count < 0 ? zero() : count}</p>
         <p className={count === 5 ? "d-flex justify-content-center" : "d-none"}>Wow 5!</p>
         <p className={count === 10 ? "d-flex justify-content-center" : "d-none"}>Perfect 10!!</p>
         <p className={count === -5 ? "d-flex justify-content-center" : "d-none"}>-5, going backwards!</p>
