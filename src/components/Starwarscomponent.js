@@ -34,20 +34,15 @@ function Starwarscomponent() {
       return (
         <p key={i}>  
 
-            {JSON.stringify(item.name)}
+            {JSON.stringify(item.name + ",")} 
+            {update ==="people" ? " Height:"+ JSON.stringify(item.height) : null }
+            {update ==="planets" ?  " Population:" + JSON.stringify(item.population) : null }
+            {update ==="starships" ? " Passengers:" + JSON.stringify(item.passengers) : null }
             
         </p>
       )
     })}
-    {update === "people" ? content.map((item, i) =>{
-      return (
-        <p key={i}>  
 
-            {JSON.stringify(item.height)}
-            
-        </p>
-      )
-    }) : null }
 
     </div>
       
