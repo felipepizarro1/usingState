@@ -37,7 +37,7 @@ function Starwarscomponent() {
       <div className='row g-2'>
     {content.map((item, i) =>{
       return (
-        <div className='card col-4 bg-transparent' key={i}>  
+        <div className='card col-4 bg-transparent test' key={i}>  
           <p className='mt-2'>
             {JSON.stringify(item.name + ",")} 
 
